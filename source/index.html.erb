@@ -1,10 +1,26 @@
 ---
-title: Welcome to Middleman
+title: Founded in Palestine - The most innovative startups in the Palestine
 ---
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to 'Read Online Documentation', 'http://middlemanapp.com/' %>
-  </p>
+<% if data.companies.select{|c| c.featured }.count > 0 %>
+  <div class="row startups-list">
+    <%= partial'shared/featured_line', locals: { title: '<i class="fa fa-star-o"></i>&nbsp;&nbsp;&nbsp;&nbsp;Featured Startups', width: 180 } %>
+    <% data.companies.select{|c| c.featured }.sort_by{ |c| c.name.downcase }.each do |co| %>
+      <div class="col-md-3 col-sm-3 col-ms-4 col-xs-6 startup-item">
+        <%= partial'shared/company_box', locals: { co: co } %>
+      </div>
+    <% end %>
+<!--     <div class="col-md-12 text-center line-note">
+      <strong>Always at the top of the list?</strong> <a href="#advertise">Promote your startup.</a>
+    </div> -->
+  </div>
+<% end %>
+
+<div class="row startups-list">
+  <%= partial'shared/featured_line', locals: { title: 'All Startups', width: 110 } %>
+  <% data.companies.select{|c| !c.featured }.sort_by{ |c| c.name.downcase }.each do |co| %>
+    <div class="col-md-15 col-sm-3 col-ms-4 col-xs-6 startup-item">
+      <%= partial'shared/company_box', locals: { co: co } %>
+    </div>
+  <% end %>
 </div>

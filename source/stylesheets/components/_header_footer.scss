@@ -1,0 +1,91 @@
+.logo {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  background: none;
+  a {
+    background: transparent;
+    &:hover {
+      background: transparent;
+    }
+    h1 {
+      height: 80px;
+      background: image-url('logo.png') no-repeat center top;
+      background-size: contain;
+      text-indent: -9999999px;
+      -webkit-animation-name: logo;
+      -webkit-animation-duration: .9s;
+    }
+  }
+}
+
+@-webkit-keyframes logo {
+  from {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+   -webkit-transform: scale(0);
+   opacity: 0;
+  }
+  82.5% {
+    -webkit-transform: scale(1.03);
+    -webkit-animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+header {
+  margin-bottom: 50px;
+
+  p {
+    font-size: 1.2em;
+    display: block;
+    font-weight: 300;
+    line-height: 1.75;
+    margin: 1.250em 0;
+    letter-spacing: 0.01em;
+  }
+}
+
+.join-box {
+  margin-bottom: 80px;
+  & > div {
+    margin-bottom: 50px;
+  }
+  p {
+    font-size: 1.2em;
+    display: block;
+    font-weight: 300;
+    line-height: 1.75;
+    margin: 1px 0;
+    letter-spacing: 0.01em;
+  }
+}
+
+.footer {
+  margin-top: 30px;
+
+  & > div {
+    margin-bottom: 50px;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+
+  p.social-follow {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  a.foundedx-badge {
+    background: transparent;
+    img {
+      width: 50px;
+    }
+  }
+}

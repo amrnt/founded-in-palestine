@@ -1,0 +1,21 @@
+{
+  "name": "founded-in-palestine",
+  "version": "0.0.1",
+  "homepage": "https://github.com/amrnt/founded-in-palestine",
+  "authors": [
+    "Amr Tamimi <amrnt0@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1",
+    "font-awesome": "~4.2.0"
+  }
+}

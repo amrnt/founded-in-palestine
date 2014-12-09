@@ -1,0 +1,6 @@
+<% link_to "#{co.website}?ref=fip", target: '_blank', alt: co.name do %>
+  <%= image_tag("logos/#{co.logo}", class: 'img-responsive') %>
+  <div>
+    <h3><%= co.name %></h3>
+  </div>
+<% end %>
