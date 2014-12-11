@@ -14,20 +14,20 @@
     <meta property="og:site_name" content="Founded in Palestine" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.foundedinpalestine.com" />
-    <meta property="og:image" content="/images/avatar.png" />
+    <meta property="og:image" content="http://www.foundedinpalestine.com/images/avatar.png" />
 
     <meta name="twitter:site" content="@foundedinpalestine" />
     <meta name="twitter:title" content="<%= current_page.data.title || 'Founded in Palestine' %>" />
 
     <meta name="author" content="Founded in Palestine Team" />
-    <%= favicon_tag 'favicon.ico' %>
-    <link rel="apple-touch-icon-precomposed" href="/images/avatar.png" />
+    <%= favicon_tag 'favicon.png' %>
+    <link rel="apple-touch-icon-precomposed" href="http://www.foundedinpalestine.com/images/avatar.png" />
 
     <%= stylesheet_link_tag 'styles' %>
   </head>
 
   <body class="<%= page_classes %>">
-    <div class="container">
+    <div class="container-fluid">
       <%= partial 'shared/header' %>
       <%= yield %>
       <%= partial 'shared/footer' %>

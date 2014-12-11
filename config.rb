@@ -9,7 +9,7 @@ end
 configure :build do
   activate :minify_css
   activate :minify_javascript
-  activate :asset_hash
+  activate :asset_hash, ignore: ['avatar.png']
   activate :relative_assets
   activate :directory_indexes
 
